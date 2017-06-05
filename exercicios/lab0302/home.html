@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home</title>
+</head>
+<body ng-app="dadosApp">
+  <div ng-controller="dadosController">
+  <h4>Dados</h4>
+  {{data}}
+ </div> 
+  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script>
+  
+  var dadosApp = angular.module("dadosApp",[]);
+  dadosApp.service('dadosService', function($http) {
+	this.getIPData = function () {
+		return $http({
+			method: 'GET',
+			url: 'http://localhost:3000/api',
+			params: {}
+		}).then(function(obj) {
+			return obj.data;
+		});
+	}
+});
+dadosApp.controller('dadosController', function($scope, dadosService) {
+    dadosService.getIPData().then(function(data){
+      $scope.data = data;
+    });
+});
+
+  </script>
+</body>
+</html>

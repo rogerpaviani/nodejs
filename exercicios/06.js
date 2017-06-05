@@ -4,10 +4,11 @@
 var contato = require('./contato');
 contato.ola();
 
-/*No arquivo contato.js*/
-exports.ola = function() {
-  console.log('Entrando em contato');
-}
+var calcula = require('./calcula')();
+calcula.somar(15, 3);
+calcula.subtrair(15, 3);
+calcula.multiplicar(15, 3);
+calcula.dividir(15, 3);
 
 /*
 module.exports = function() {

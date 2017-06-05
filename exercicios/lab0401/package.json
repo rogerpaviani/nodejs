@@ -1,0 +1,14 @@
+{
+  "name": "lab0401",
+  "version": "1.0.0",
+  "description": "Primeiro projeto com ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger PAVIANI",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

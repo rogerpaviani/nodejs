@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "nome": "paviani",
+            "idade": 33
+        },
+        {
+            "nome": "follmann",
+            "idade": 29
+        }
+    ]
+}

@@ -6,6 +6,7 @@ var handle = {}
 handle["/"] = requestHandlers.home;
 handle["/home"] = requestHandlers.home;
 handle["/contato"] = requestHandlers.contato;
-handle["/api"] = requestHandlers.api;
+handle["/cidade"] = requestHandlers.cidade;
+handle["/estado"] = requestHandlers.estado;
 
 server.start(router.route, handle);
